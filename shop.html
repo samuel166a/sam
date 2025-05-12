@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black and White Centered Form</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #fdfafa;
+            font-family: Arial, sans-serif;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 350px;
+            padding: 30px 25px;
+            border-radius: 20px;
+            background-color: #ffffff;
+            color: #000000;
+            box-shadow: 0 8px 30px rgba(255, 255, 255, 0.1);
+            border: 2px solid #000000;
+        }
+
+        .title {
+            font-size: 28px;
+            font-weight: 700;
+            text-align: center;
+            color: #000000;
+            margin-bottom: 10px;
+        }
+
+        .message, .signin {
+            font-size: 14px;
+            color: #555555;
+            text-align: center;
+        }
+
+        .signin a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .signin a:hover {
+            text-decoration: underline;
+        }
+
+        .flex {
+            display: flex;
+            gap: 10px;
+        }
+
+        .form label {
+            position: relative;
+        }
+
+        .form label .input {
+            background-color: #f9f9f9;
+            color: #000000;
+            width: 100%;
+            padding: 15px 10px;
+            border: 1px solid #000000;
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .form label .input:focus {
+            border-color: #000000;
+            background-color: #ffffff;
+        }
+
+        .form label .input + span {
+            position: absolute;
+            left: 15px;
+            top: 10px;
+            font-size: 0.9em;
+            color: #777777;
+            transition: 0.3s ease;
+            pointer-events: none;
+        }
+
+        .form label .input:focus + span, .form label .input:not(:placeholder-shown) + span {
+            top: -10px;
+            font-size: 0.75em;
+            color: #000000;
+            background-color: #ffffff;
+            padding: 0 5px;
+            border-radius: 4px;
+        }
+
+        .submit {
+            border: none;
+            outline: none;
+            padding: 12px;
+            border-radius: 10px;
+            background-color: #000000;
+            color: #ffffff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit:hover {
+            background-color: #555555;
+        }
+    </style>
+</head>
+<body>
+    <form class="form">
+        <p class="title">Register</p>
+        <p class="message">Signup now and enjoy our services</p>
+        <div class="flex">
+            <label>
+                <input class="input" type="text" placeholder=" " required>
+                <span>Firstname</span>
+            </label>
+            <label>
+                <input class="input" type="text" placeholder=" " required>
+                <span>Lastname</span>
+            </label>
+        </div>
+        <label>
+            <input class="input" type="email" placeholder=" " required>
+            <span>Email</span>
+        </label>
+        <label>
+            <input class="input" type="password" placeholder=" " required>
+            <span>Password</span>
+        </label>
+        <label>
+            <input class="input" type="password" placeholder=" " required>
+            <span>Confirm Password</span>
+        </label>
+        <button class="submit">Submit</button>
+        <p class="signin">Already have an account? <a href="#">Signin</a></p>
+    </form>
+</body>
+</html>
